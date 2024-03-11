@@ -16,11 +16,16 @@ const assignment = {};
  */
 function sumOfNumbersTo(destination) {
     let sum = 0;
+    for (let start = 1; start <= destination; start++){
+     sum += start;
+    }
     return sum
 }
 
+console.log(sumOfNumbersTo(10)) 
 
-// assignment.sumOfNumbersTo = sumOfNumbersTo;
+
+ assignment.sumOfNumbersTo = sumOfNumbersTo;
 
 /**
  * Challenge - 2
@@ -38,9 +43,16 @@ function countEvenNumbersWithin(destination) {
     let sum = 0;
     let count = 0;
     let arrayOfEvenNumbers = [];
-
+   
+     for (let i = 1; i <= destination; i++) {
+        if (i % 2 == 0) {
+            count += 1;
+            sum += i;
+            arrayOfEvenNumbers.push(i);
+        }
+     }
     return {
-        // property value shorthand
+        //property value shorthand
         // when the property name and the value name are the same
         // you can just write the property name in your object
         count,
@@ -49,7 +61,9 @@ function countEvenNumbersWithin(destination) {
     };
 }
 
-// assignment.countEvenNumbersWithin = countEvenNumbersWithin;
+console.log(countEvenNumbersWithin(10))
+
+ assignment.countEvenNumbersWithin = countEvenNumbersWithin;
 
 /**
  * Challenge - 3
@@ -68,11 +82,17 @@ function countEvenNumbersWithin(destination) {
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
     let result = [];
+    for (let i= 0; i< arrayOfNumbers.length; i++) {
+     fahrenheit = arrayOfNumbers[i] * (9 / 5) + 32;
+      result.push(Math.trunc(fahrenheit))
+    }
 
     return result;
 }
 
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+console.log((celsiusToFahrenheit([ 51.21, 23, 0, -55, 100 ])))
+
+ assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 // ========================
 // DO NOT EDIT THIS BLOCK
